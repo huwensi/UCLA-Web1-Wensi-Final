@@ -13,9 +13,9 @@ import ReactDOM from 'react-dom';
 /*---------------------------
 | Components
 ---------------------------*/
-import Main from './React/Main.jsx';
+import OpendoorClosedoor from './React/OpendoorClosedoor.jsx';
 
 /*---------------------------
 | Render to DOM
 ---------------------------*/
-ReactDOM.render(<Main />, document.getElementById('root'));
+ReactDOM.render(<OpendoorClosedoor />, document.getElementById('root'));
