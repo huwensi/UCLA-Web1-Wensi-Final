@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
 const OpendoorClosedoor = () => {
-    const [imageSrc, imageSrcUpdate] = useState('/assets/img/moon.png');
+    const [imageSrc, imageSrcUpdate] = useState('/assets/img/closedoor.png');
     const imageOver = () => {
-        imageSrcUpdate('/assets/img/sun.png');
+        imageSrcUpdate('/assets/img/opendoor.png');
     }
     const imageOut = () => {
-        imageSrcUpdate('/assets/img/moon.png');
+        imageSrcUpdate('/assets/img/closedoor.png');
     }
     return (
         <div>
