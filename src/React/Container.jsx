@@ -1,6 +1,8 @@
 import React from 'react'
+import { BrowserRouter } from 'react-router-dom'
 
-import OpendoorClosedoor from './OpendoorClosedoor.jsx';
+
+import Main from './Main.jsx';
 import Footer from './Footer.jsx';
 import Header from './Header.jsx';
 import Nav from './Nav.jsx';
@@ -10,13 +12,14 @@ import Nav from './Nav.jsx';
 const Container = () => {
 
     return (
-        <div className='Container'>
-            CONTENT
-            <Footer />
-            <Header />
-            <Nav />
-            <OpendoorClosedoor />
-        </div>
+        <BrowserRouter>
+            <div className='Container'>
+                <Footer />
+                <Header />
+                <Nav />
+                <Main />
+            </div>
+        </BrowserRouter>
     );
 }
 

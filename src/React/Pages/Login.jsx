@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-const OpendoorClosedoor = () => {
+const Login = () => {
     
     const [imageSrc, imageSrcUpdate] = useState('/assets/img/closedoor.png');
    
@@ -13,7 +13,7 @@ const OpendoorClosedoor = () => {
     
     return (
         <div>
-            OpendoorClosedoor
+            <h1>OpendoorClosedoor</h1>
             <img 
                 src={ imageSrc }
                 alt='OpendoorClosedoor'
@@ -24,4 +24,4 @@ const OpendoorClosedoor = () => {
     )
 }
 
-export default OpendoorClosedoor;
+export default Login;
