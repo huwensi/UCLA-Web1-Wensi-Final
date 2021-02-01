@@ -2,10 +2,10 @@ import React from 'react';
 
 const Nav = () => {
     return (
-        <div className="Nav">
-             NAV
+        <div className='Nav'>
+            NAV
         </div>
     );
 }
 
-export default Nav
+export default Nav;
