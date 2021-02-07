@@ -6,9 +6,9 @@ const Nav = () => {
     return (
         <NavStyled className='Nav'>
             <a href="/">Welcome</a>
-            <a href="/>login">Login</a>
-            <a href="/>services">Services</a>
-            <a href="/>contact">Contact</a>
+            <a href="/login">Login</a>
+            <a href="/services">Services</a>
+            <a href="/contact">Contact</a>
         </NavStyled>
     );
 }
@@ -17,11 +17,13 @@ export default Nav;
 
 const NavStyled = styled.nav`
     a {
-        background-color:teal
+        background: teal;
         color: white;
         text-decoration: none;
 
         padding: 10px;
         margin: 10px;
+
+    
     }
 `;
