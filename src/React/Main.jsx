@@ -3,10 +3,10 @@ import { Switch, Route } from 'react-router-dom';
 
 
 /* Components ---------------------*/
-import Contact from './Pages/Contact.jsx';
-import Login from './Pages/Login.jsx';
-import Services from './Pages/Services.jsx';
-import Welcome from './Pages/Welcome.jsx';
+import Contact from './Pages/Contact/Contact.jsx';
+import Login from './Pages/Login/Login.jsx';
+import Services from './Pages/Services/Services.jsx';
+import Welcome from './Pages/Welcome/Welcome.jsx';
 
 
 const Main = () => {
@@ -21,6 +21,6 @@ const Main = () => {
     </main>
     
     )
-}
+} 
 
 export default Main;

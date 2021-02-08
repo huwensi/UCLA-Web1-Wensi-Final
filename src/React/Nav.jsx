@@ -1,14 +1,15 @@
 import React from 'react';
 import styled from 'styled-components';
+import { NavLink } from 'react-router-dom'
 
 
 const Nav = () => {
     return (
         <NavStyled className='Nav'>
-            <a href="/">Welcome</a>
-            <a href="/login">Login</a>
-            <a href="/services">Services</a>
-            <a href="/contact">Contact</a>
+            <NavLink to="/"exact>Welcome</NavLink>
+            <NavLink to="/login">Login</NavLink>
+            <NavLink to="/services">Services</NavLink>
+            <NavLink to="/contact">Contact</NavLink>
         </NavStyled>
     );
 }
@@ -23,6 +24,11 @@ const NavStyled = styled.nav`
 
         padding: 10px;
         margin: 10px;
+
+        &.active {
+            background-color: #0a5656
+        }
+    
 
     
     }

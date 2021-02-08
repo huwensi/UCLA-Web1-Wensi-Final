@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
+import styled from 'styled-components';
 
-const Login = () => {
+const OpendoorClosedoor = () => {
     
     const [imageSrc, imageSrcUpdate] = useState('/assets/img/closedoor.png');
    
@@ -11,17 +12,22 @@ const Login = () => {
         imageSrcUpdate('/assets/img/closedoor.png');
     }
     
+
     return (
-        <div>
-            <h1>OpendoorClosedoor</h1>
+        <OpendoorClosedoorStyled className='OpendoorClosedoor'>
+           <h2>OpendoorClosedoor</h2>
             <img 
                 src={ imageSrc }
                 alt='OpendoorClosedoor'
                 onMouseOver={ imageOver }
                 onMouseOut={ imageOut } 
             />
-        </div>
-    )
+        </OpendoorClosedoorStyled>
+    );
 }
 
-export default Login;
+export default OpendoorClosedoor;
+
+const OpendoorClosedoorStyled = styled.div`
+    
+`;
