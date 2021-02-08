@@ -5,7 +5,7 @@ const Slideshow = () => {
 
     return (
         <SlideshowStyled className='Slideshow'>
-            <img src='/assets/img/slideshow/slide-1.jpg' />
+            <img src='/assets/img/Slideshow/slide-1.jpg' alt='Slide 1' />
         </SlideshowStyled>
     );
 }
