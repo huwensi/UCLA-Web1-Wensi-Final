@@ -1,6 +1,10 @@
 import React from 'react';
 import styled from 'styled-components';
 
+
+/* Script -------------------------------*/
+import { mq } from '../../../../common/media_queries.js';
+
 const TabbedContent = ({chosenTab}) => {
 
 
@@ -8,8 +12,13 @@ const TabbedContent = ({chosenTab}) => {
 
     return (
         <TabbedContentStyled className='TabbedContent'>
-            <img src={ chosenTab.image } alt= { chosenTab.titile }  />
+        <div className="left">
+            <img src={ chosenTab.image } alt={ chosenTab.title } />
+        </div>
+        <div className="right">
             <h3>{ chosenTab.titile }</h3>
+            <div dangerouslySetInnerHTML={ { __html: chosenTab.text } } />
+            </div>
         </TabbedContentStyled>
     );
 }
@@ -20,5 +29,28 @@ const TabbedContentStyled = styled.div`
 
     background-color: teal;
     padding: 20px;
+
+    @media ${mq.desktop} {
+        display:flex;
+    }
+
+    display: flex;
+
+    .left {
+        flex: 1;
+        img { max-width:100%; }
+    }
+
+    .right {
+        flex: 3;
+
+    }
+
+
+    @media ${mq.desktop} {
+        .right {
+            padding:0px 20px;
+        }
+    }
     
 `;

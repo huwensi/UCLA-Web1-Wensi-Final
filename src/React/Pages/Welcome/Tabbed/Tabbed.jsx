@@ -4,6 +4,7 @@ import styled from 'styled-components';
 /* Script -------------------------------*/
 import { tabItems } from './tabbed_data.js';
 
+
 /* Components ---------------------------*/
 import TabbedNav from './TabbedNav.jsx';
 import TabbedContent from './TabbedContent.jsx';

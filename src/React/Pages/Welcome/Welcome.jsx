@@ -11,9 +11,10 @@ const Welcome = () => {
             <h1>Welcome</h1>
 
             {/* <Slideshow /> */}
-            <Tabbed />
+            <div className="nestd">
+                <Tabbed />
+            </div>
             <Staff />
-
         </div>
     );
 }
