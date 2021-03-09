@@ -1,21 +1,39 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components';
-
 
 /* Scripts ---------------------------*/
 import { mq } from '../../../../common/media_queries.js';
 
 /* Components ---------------------------*/
-import LightBox from '../../../Shared/Lightbox/Lightbox.jsx'
+import Lightbox from '../../../Shared/Lightbox/Lightbox.jsx';
 
 const StaffMember = ({member}) => {
 
+    const [showLightbox, showLightboxUpdate] = useState(false);
+
+    const handleOnHide = () => {
+        console.log('Closing Lightbox');
+        showLightboxUpdate(false);
+    }
+
+    const handleOnshow = () => {
+        showLightboxUpdate(true);
+    }
+
     return (
         <StaffMemberStyled className='StaffMember'>
-        <img src={ member.image } alt={ member.name } />
-        <h3>{ member.name }</h3>
-
-        <LightBox />
+            <div onClick={ handleOnshow }>
+                <img src={ member.image } alt={ member.name }/>
+                <h3>{ member.name}</h3>
+            </div>
+            
+            <Lightbox 
+                show={ showLightbox }
+                onHide={ handleOnHide }
+            >
+                <img src={ member.image } alt={ member.name }/>
+                <h3>{ member.name }</h3>
+            </Lightbox>
 
         </StaffMemberStyled>
     );
@@ -25,20 +43,17 @@ export default StaffMember;
 
 const StaffMemberStyled = styled.div`
 
-    margin: 10px; width: 100px;
-   /*  flex: 1; */
 
-    @media ${mq.desktop} {
+    /* flex: 1; */
+    width: 100px; margin: 10px;
+
+    @media ${mq.tablet} {
         width: 150px; margin: 15px;
     }
 
-
-    @media ${mq.tablet} {
-        width: 200px; margin: 20px;
+    @media ${mq.desktop} {
+        width: 200pxx; margin: 20px;
     }
-
-
-
 
     img {
         max-width: 100%;
@@ -51,9 +66,6 @@ const StaffMemberStyled = styled.div`
         background-color: maroon;
         font-size: 16px;
         padding: 5px;
-
-        
-
     }
     
 `;

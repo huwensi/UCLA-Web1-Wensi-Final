@@ -1,15 +1,17 @@
 import React from 'react';
 import styled from 'styled-components';
 
+
+/* Components ---------------------------*/
 import Light from './Light.jsx';
-const Lightbox = ({ show, onHide, children }) => {
+const Lightbox = ({ show, onHide, children, width='340px' }) => {
 
     if (!show) {return ''; }
 
     return (
         <LightboxStyled className='Lightbox' onClick={ onHide }>
-        <Light> 
-        { children }
+        <Light onHide={ onHide } width={ width }> 
+            { children }
         </Light>
         </LightboxStyled>
     );
