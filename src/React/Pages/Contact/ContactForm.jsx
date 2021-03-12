@@ -14,7 +14,12 @@ const ContactFrom = () => {
 
     return (
         <ContactFromStyled className='ContactFrom'>
-            <UniversalForm fields={ contactFields } />
+            <UniversalForm 
+            fields={ contactFields } 
+            apiURL='/user/login'
+            submitText='Send email'
+            />
+            
         </ContactFromStyled>
     );
 }
